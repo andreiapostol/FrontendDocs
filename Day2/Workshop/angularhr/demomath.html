@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset= "UTF-8">
+    <title> HR APP</title>
+    <link rel = "stylesheet" type = "text/css" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "css/main.css"/>
+
+</head>
+<body>
+<h1> Simple math operations</h1>
+
+<div ng-app="page2">
+    <div ng-controller="OperationsController">
+
+        <p> Enter the first number: <input type = "number" ng-model="firstNumber" ng-change="doCalc()"> </p>
+        <p> Enter the second number: <input type = "number" ng-model="secondNumber" ng-change="doCalc()"> </p>
+
+        <p>Addition: {{fieldsSum}} </p>
+        <p>Substraction: {{fieldsSubstraction}} </p>
+        <p>Product: <span ng-bind="fieldsProduct"></span> </p>
+        <p>Division: <span ng-bind="fieldsDivision"></span> </p>
+    </div>
+</div>
+<script type = "text/javascript" src = "bower_components/jquery/jquery.js"></script>
+<script type = "text/javascript" src = "bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type = "text/javascript" src = "bower_components/angular/angular.js"></script>
+<script type = "text/javascript" src = "scripts/app2.js"></script>
+<script type = "text/javascript" src = "scripts/OperationsController.js"></script>
+<!--<script type = "text/javascript" src = "scripts/app.js"></script>-->
+</body>
+
+</html>

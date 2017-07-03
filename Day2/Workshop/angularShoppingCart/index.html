@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset= "UTF-8">
+    <title> HR APP</title>
+    <link rel = "stylesheet" type = "text/css" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rek = "stylesheet" type="text/css" href = "bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+    <!--<link rel = "stylesheet" type = "text/css" href = "css/main.css"/>-->
+
+</head>
+<body>
+
+
+<div ng-app="employeesApp">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid" ng-include="'menu.html'">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+        <!--<a class="btn btn-primary btn-lg" role="button">Menu</a>-->
+        <!--<a class="btn btn-primary btn-lg" role="button">Home</a>-->
+        <!--<a class="btn btn-primary btn-lg" role="button" ng-click="showList()">Employees</a>-->
+    </div>
+</nav>
+
+    <div>
+
+        <div ng-include="'products.html'"> </div>
+    </div>
+</div>
+
+
+
+<script type = "text/javascript" src = "bower_components/jquery/jquery.js"></script>
+<script type = "text/javascript" src = "bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type = "text/javascript" src = "bower_components/angular/angular.js"></script>
+<script type = "text/javascript" src = "script/App.js"></script>
+<script type = "text/javascript" src = "script/MenuController.js"></script>
+<script type = "text/javascript" src = "script/ProductsController.js"></script>
+<script type = "text/javascript" src = "script/ShoppingCartController.js"></script>
+</body>
+</html>

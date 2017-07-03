@@ -1,0 +1,22 @@
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Menu <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown" ng-controller="MenuController">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employees <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li ng-repeat = "employee in employeesList"><a href="{{employee.url}}">{{employee.label}}</a></li>
+                <!--<li><a href="#">ListEmployees2</a></li>-->
+                <!--<li><a href="#">ListEmployees3</a></li>-->
+            </ul>
+        </li>
+        <li class = "dropdown" ng-controller = "MenuController">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demo actions <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li ng-repeat = "action in demoActionsList"><a href="{{action.url}}">{{action.label}}</a></li>
+                <!--<li><a href="#">ListEmployees2</a></li>-->
+                <!--<li><a href="#">ListEmployees3</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+        <div class="container">
+            <div>
+                <h1>Angular ng-options example</h1>
+            </div>
+            <p>
+                <select ng-model="chosenColor" ng-options="color.text group by color.type for color in colors" ng-change = "changeColor()">
+                </select>
+                Chosen color class: {{chosenColorClass}}
+
+            </p>
+            <p>
+            <h1><span ng-class = "chosenColorClass"> Culoare</span> </h1>
+            </p>
+            Input 1: <input ng-model = "Input1"> {{Input1}}
+            Input 2: <input ng-model = "Input2"> {{Input2}}
+
+            <div ng-repeat="color in colors | filter: Input1 | orderBy: Input2"> {{color.text}}</div>
+
+        </div>

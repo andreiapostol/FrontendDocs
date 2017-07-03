@@ -1,0 +1,3 @@
+hrApp.value('userDetails', []);
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Demo HR</title>
+    <link rel = "stylesheet" type = "text/css" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "css/main.css"/>
+    <script type = "text/javascript" src = "scripts/app.js"></script>
+</head>
+
+<body>
+
+<h1>HR Employees List Page</h1>
+<div class = "panel panel-default">
+    <div class = "panel-heading description">
+        Employees list
+    </div>
+    <div class = "panel-body">
+        <div>
+            <p>
+                <button onclick = "showList()"> Show List </button>
+            </p>
+        </div>
+        <div id = "listcontainer">
+
+        </div>
+    </div>
+
+    </div>
+<div>
+    <a href = "index.html"> Back to Home Page </a>
+</div>
+
+<div class = "panel panel-default">
+    <div class = "panel-heading description">
+        Add employee
+    </div>
+    <div class = "panel-body">
+        <p>
+            First Name: <input type = "text" id = "firstName"/>
+        </p>
+        <p>
+            Last Name: <input type = "text" id = "lastName"/>
+        </p>
+        <p>
+            Phone: <input type = "text" id = "phone"/>
+        </p>
+        <p>
+            Salary: <input type = "text" id = "salary"/>
+        </p>
+        <p>
+            <button onclick = "addEmployee(); showList()"> Add Employee</button>
+        </p>
+
+    </div>
+</div>
+<div>
+    <a href = "index.html"> Back to Home Page </a>
+</div>
+<div>
+    <button onclick = showSum()>Salary total</button>
+</div>
+<p>
+<div id = "toShowSum">
+
+</div>
+</p>
+
+<div>
+    <button onclick = deleteLastEmployee()> Delete last employee</button>
+</div>
+
+<div>
+    <button onclick = convertSalary()> Convert salary </button>
+</div>
+<p>
+    Sort by:
+<input type = "number" id = "command">
+
+</input>
+</p>
+<button onclick= selectCase()> Go go go</button>
+
+<p>
+    Input: <input type = "text" id = "word"/>
+</p>
+<button onclick= filtrareTabel()> AfiseazaTabel </button>
+
+<div id = "tabel2"> </div>
+
+</body>
+
+</html>

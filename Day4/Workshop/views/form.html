@@ -1,0 +1,20 @@
+<div class="container">
+    <div>
+        <h1>Angular ng-form example</h1>
+    </div>
+    <p>
+        <ng-form name = "myForm">
+
+            <input name = "input1" ng-model = "usertype" required>
+            <span class = "error" ng-show ="myForm.input1.$error.required"> Required input!</span> <br>
+            user = {{usertype}}<br>
+
+            <button ng-click = "submitForm()"> Submit </button>
+            <div ng-repeat="zzz in usertypeData"> {{zzz}} </div>
+        </ng-form>
+
+    </p>
+    <p>
+
+    </p>
+</div>

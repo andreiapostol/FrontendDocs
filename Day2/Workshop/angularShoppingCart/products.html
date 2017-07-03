@@ -1,0 +1,34 @@
+<div class="container" ng-controller="ProductsController">
+    <div class="row">
+        <h1>Best shop everrrr</h1>
+
+        <div ng-repeat="product in productsList" ng-mouseover="product.showPrice = true" ng-mouseleave="product.showPrice = false"
+             ng-click="addToCart(product)" class="col-lg-3 col-sm-4 col-xs-6"><a title="" href="#">
+            <img class="thumbnail img-responsive" src="{{product.url}}"></a>
+        <div ng-show="product.showPrice"> {{product.price}} </div>
+
+        </div>
+
+
+        <hr>
+
+        <hr>
+    </div>
+</div>
+
+<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">×</button>
+                <h3 class="modal-title">Heading</h3>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
