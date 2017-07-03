@@ -1,9 +1,21 @@
-hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
+hrApp.service('ManagerService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
         return {
-            findById: function (employeeId) {
-                return $http.get(CommonResourcesFactory.findOneEmployeeUrl + employeeId)
+            findManagers: function () {
+                return $http.get(CommonResourcesFactory.findAllEmployeesUrl)
                     .success(function (data) {
+
                         return data;
+
+                        // var managers = [];
+                        // isManagerValid = 0;
+                        // for (i in data) {
+                        //     if (data[i].managerId) {
+                        //         var isValid = 1;
+                        //         for (j in managers) if (managers[j] === data[i].managerId) isValid = 0;
+                        //         if (isValid) managers.push(data[i].managerId);
+                        //     }
+                        // }
+                        // return managers;
                     })
                     .error(function (err) {
                         return {
@@ -20,9 +32,6 @@ hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function ($
                             "departmentId": 90
                         };
                     });
-            },
-            addNewEmployee: function (employee){
-                return $http.post(CommonResourcesFactory.addEmployeeUrl, employee);
             }
         }
     }]

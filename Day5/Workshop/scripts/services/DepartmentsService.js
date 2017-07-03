@@ -1,7 +1,7 @@
-hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
+hrApp.service('DepartmentsService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
         return {
-            findById: function (employeeId) {
-                return $http.get(CommonResourcesFactory.findOneEmployeeUrl + employeeId)
+            findDepartments: function () {
+                return $http.get(CommonResourcesFactory.findAllDepartmentsUrl)
                     .success(function (data) {
                         return data;
                     })
@@ -20,9 +20,6 @@ hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function ($
                             "departmentId": 90
                         };
                     });
-            },
-            addNewEmployee: function (employee){
-                return $http.post(CommonResourcesFactory.addEmployeeUrl, employee);
             }
         }
     }]

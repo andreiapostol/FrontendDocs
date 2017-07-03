@@ -1,8 +1,7 @@
-hrApp.controller('EmployeeListController', ['$scope', '$http', '$location', 'CommonResourcesFactory',
+hrApp.controller('EmployeeListController', ['$scope','$http', '$location', 'CommonResourcesFactory',
     function ($scope, $http, $location, CommonResourcesFactory) {
 
         $scope.employees = [];
-
          /*
          $scope.employees = [
          {
@@ -52,11 +51,21 @@ hrApp.controller('EmployeeListController', ['$scope', '$http', '$location', 'Com
                 $scope.employees = data;
             });
 
+
         $scope.viewEmployee = function (employeeId) {
             $location.url('/employeeView/' + employeeId);
         };
 
         $scope.editEmployee = function(employeeId) {
             $location.url('/employeeEdit/' + employeeId);
+        };
+
+
+
+        $scope.deleteEmployee = function (deleteEmployee) {
+            $http({url: CommonResourcesFactory.deleteEmployeeUrl, method: 'DELETE', data: deleteEmployee, headers: {'Content-Type': 'application/json'}})
+                .success(function (data) {
+                    $location.url('/employeeList/');
+                });
         };
     }]);
